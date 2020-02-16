@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>MDB</title>
+  <title>Nimbl</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -19,7 +19,7 @@
     <!--Section: Content-->
     <section class="magazine-section dark-grey-text">
       <!-- Section heading -->
-      <h3 class="text-center font-weight-bold mb-4 pb-2">Magazine newsfeed</h3>
+      <h3 class="text-center font-weight-bold mb-4 pb-2">Actualités</h3>
       <!-- Section description -->
       <p class="text-center w-responsive mx-auto mb-5">Duis aute irure dolor in reprehenderit in voluptate velit
       esse cillum dolore eu fugiat nulla sint occaecat cupidatat non proident, sunt culpa
@@ -32,7 +32,7 @@
           <div class="single-news">
             <!-- Image -->
             <div class="view overlay rounded z-depth-1-half mb-4">
-              <img id="image-latest-news" src="https://mdbootstrap.com/img/Photos/Slides/1.jpg" alt="Sample image">
+              <img id="image-latest-news" src="assets/img/surface-soleil-details.jpg" alt="Sample image">
               <a>
                 <div class="mask rgba-white-slight"></div>
               </a>
@@ -40,12 +40,12 @@
             <!-- Data -->
             <div class="news-data d-flex justify-content-between">
               <a href="#!" class="deep-orange-text">
-                <h6 class="font-weight-bold"><i class="fas fa-utensils pr-2"></i>Culinary</h6>
+                <h6 class="font-weight-bold"><i class="fas fa-sun pr-2"></i>Système solaire</h6>
               </a>
-              <p class="font-weight-bold dark-grey-text"><i class="fas fa-clock-o pr-2"></i>27/02/2018</p>
+              <p class="font-weight-bold dark-grey-text"><i class="fas fa-clock-o pr-2"></i>07/02/2020</p>
             </div>
             <!-- Excerpt -->
-            <h3 class="font-weight-bold dark-grey-text mb-3"><a>Title of the news</a></h3>
+            <h3 class="font-weight-bold dark-grey-text mb-3"><a>Le soleil comme vous ne l'avez jamais vu!</a></h3>
             <p class="dark-grey-text">Sed ut perspiciatis unde voluptatem omnis iste natus
               error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
               inventore veritatis et quasi architecto beatae vitae explicabo. Duis aute irure dolor in
@@ -63,7 +63,7 @@
               <div class="col-md-3">
                 <!--Image-->
                 <div class="view overlay rounded z-depth-1 mb-4">
-                  <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/img%20(29).jpg" alt="Sample image">
+                  <img class="img-fluid" src="assets/img/bubbles.png" alt="Sample image">
                   <a>
                     <div class="mask rgba-white-slight"></div>
                   </a>
@@ -72,7 +72,7 @@
               <!-- Grid column -->
               <div class="col-md-9">
                 <!-- Excerpt -->
-                <p class="font-weight-bold dark-grey-text">26/02/2018</p>
+                <p class="font-weight-bold dark-grey-text">La recette des bulles parfaites</p>
                 <div class="d-flex justify-content-between">
                   <div class="col-11 text-truncate pl-0 mb-3">
                     <a href="#!" class="dark-grey-text">At vero eos et accusamus et iusto odio dignissimos
@@ -92,7 +92,7 @@
               <div class="col-md-3">
                 <!--Image-->
                 <div class="view overlay rounded z-depth-1 mb-4">
-                  <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/4-col/img%20(45).jpg"
+                  <img class="img-fluid" src="assets/img/momie-voix.jpg"
                     alt="Sample image">
                   <a>
                     <div class="mask rgba-white-slight"></div>
@@ -104,7 +104,7 @@
               <div class="col-md-9">
 
                 <!-- Excerpt -->
-                <p class="font-weight-bold dark-grey-text">25/02/2018</p>
+                <p class="font-weight-bold dark-grey-text">La voix de la momie</p>
                 <div class="d-flex justify-content-between">
                   <div class="col-11 text-truncate pl-0 mb-3">
                     <a href="#!" class="dark-grey-text">Itaque earum rerum hic tenetur a sapiente delectus</a>
@@ -123,7 +123,7 @@
               <div class="col-md-3">
                 <!--Image-->
                 <div class="view overlay rounded z-depth-1 mb-4">
-                  <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/images/87.jpg" alt="Sample image">
+                  <img class="img-fluid" src="assets/img/appareil-photo-rapide.jpg" alt="Sample image">
                   <a>
                     <div class="mask rgba-white-slight"></div>
                   </a>
@@ -135,7 +135,7 @@
               <div class="col-md-9">
 
                 <!-- Excerpt -->
-                <p class="font-weight-bold dark-grey-text">24/02/2018</p>
+                <p class="font-weight-bold dark-grey-text">L'appareil photo le plus rapide du monde</p>
                 <div class="d-flex justify-content-between">
                   <div class="col-11 text-truncate pl-0 mb-3">
                     <a href="#!" class="dark-grey-text">Soluta nobis est eligendi optio cumque nihil impedit quo
@@ -158,7 +158,7 @@
               <div class="col-md-3">
                 <!--Image-->
                 <div class="view overlay rounded z-depth-1 mb-md-0 mb-4">
-                  <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Others/img%20(27).jpg" alt="Sample image">
+                  <img class="img-fluid" src="assets/img/pluton.jpg" alt="Sample image">
                   <a>
                     <div class="mask rgba-white-slight"></div>
                   </a>
@@ -169,7 +169,7 @@
               <div class="col-md-9">
 
                 <!-- Excerpt -->
-                <p class="font-weight-bold dark-grey-text">23/02/2018</p>
+                <p class="font-weight-bold dark-grey-text">Le coeur battant de Pluton</p>
                 <div class="d-flex justify-content-between">
                   <div class="col-11 text-truncate pl-0 mb-lg-3">
                     <a href="#!" class="dark-grey-text">Duis aute irure dolor in reprehenderit in voluptate</a>
