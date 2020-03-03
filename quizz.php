@@ -14,30 +14,34 @@
 </head>
 <body>
 <?php include "header.php" ?>
-  <!-- <div class="jumbotron jumbotron-fluid" id="quizzWelcome">
-      <h1 class="display-3 text-center">Bienvenu sur l'espace quizz!</h1>
-      <p class="lead">Défie Pilou et tes amis en répondant aux quizz et remporte des trophées!</p>
-      <p></p>
-  </div> -->
-  <!--<div class="jumbotron" id="jumboSolar">
-    <h1 class="display-3" id="systemeSolaire">Le système solaire</h1>
-    <div class="quiz-container">
-      <div id="quiz"></div>
-    </div>
-    <button id="previous">Previous Question</button>
-    <button id="next">Next Question</button>
-    <button id="submit">Submit Quiz</button>
-    <div id="results"></div>
-    </div>-->
 
-<div class="container">
-    <div id="home" class="flex-center flex-column">
-      <h1>Le système solaire</h1>
-      <img src="assets/img/SolarSystem.png" alt="Illustration du système solaire" id="SolarSystem">
-      <a class="btn" href="game.php">Jouer!</a>
-      <a class="btn" href="highscores.php">Highscores</a>
+<h1 class="text-center dark-grey-text">Teste tes connaissances avec les quiz!</h1>
+<div class="container my-5 py-5 z-depth-1">
+      <!--Section: Content-->
+      <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-md-6 mb-4 mb-md-0">
+            <h3 class="font-weight-bold">L'oeil et la vision</h3>
+            <p class="text-muted">Composition de l'oeil humain, sa perception de la lumière et des couleurs ...</p>
+            <a class="btn btn-purple btn-md ml-0" href="quiz-vision.php" role="button">Jouer<i class="fa fa-play ml-2"></i></a>
+          </div>
+          <!--Grid column-->
+          <!--Grid column-->
+          <div class="col-md-6 mb-4 mb-md-0">
+            <!--Image-->
+            <div class="view overlay z-depth-1-half">
+              <img src="assets/img/eye.jpg" class="img-fluid"
+                alt="">
+              <a href="#">
+                <div class="mask rgba-white-light"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-</div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

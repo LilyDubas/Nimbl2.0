@@ -33,19 +33,26 @@
               </a>
             </div>
 
-          <!-- Card text -->
-          <div class="mt-5 p-3">
-            <h2 class="text-center">Pourquoi ne voit-on pas dans le noir?</h2>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui praesentium voluptatum deleniti atque
-              corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
-              sunt in culpa nemo enim ipsam voluptatem quia voluptas sit qui officia deserunt mollitia animi, id
-              est laborum et dolorum fuga quidem rerum facilis est distinctio.
+            <!-- Card text -->
+            <div class="mt-5 p-3">
+              <h2 class="text-center font-weight-bold">Pourquoi ne voit-on pas dans le noir?</h2>
+              <p>Le fait de ne pas voir dans la nuit en français se dit « héméralopie », alors que l’inverse (voir dans la nuit) se dit « nyctalopie ».</p>
+
+              <h5 class="text-center">Pourquoi l’homme n’est pas nyctalope ?</h5>
+
+              C’est à cause de la composition de ses yeux ! Lorsque de la lumière atteint notre œil celle-ci passe d’abord par la pupille et l’iris, qui s’agrandit (se dilate) ou se rétrécit (se contracte) selon l’intensité de la lumière. Quand il y a beaucoup de lumière, ceux-ci se contractent et quand il fait plus sombre ils se dilatent afin de recevoir plus de lumière à transmettre ensuite à la rétine tapissée de récepteurs de lumière.
             </p>
-            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
-              maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Quis autem vel
-              eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur. Temporibus
-              autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates
-              repudiandae sint et molestiae non recusandae itaque earum rerum.</p>
+            <div class="m-5 d-flex justify-content-around">
+              <img src="assets/img/reflexe-pupillaire.jpg" alt="illustration pupille"  id="pupille">
+              <img src="assets/img/vision.png" alt="schéma oeil humain" id="oeil">
+            </div>
+            <p>Les récepteurs (dits photo-récepteurs car ils reçoivent la lumière, qui a pour racine le mot « photos » en grec) sont appelés des cônes et des bâtonnets.</p>
+            <p>Les cônes permettent de voir le jour (on dit « vision diurne ») et les bâtonnets permettent de voir la nuit (« vision nocturne »). Les bâtonnets ne perçoivent que le noir, le blanc et les nuances de gris !</p>
+
+            <p>Sur la rétine qui forme un tapis au fond de l’œil et qui reçoit les images que l’on voit, les cônes sont placés vers le centre et les bâtonnets sur les côtés. Lorsque la pupille se contracte ou se dilate en fonction de l’intensité lumineuse, les images ne sont pas traitées de la même manière. En effet, lorsqu’il fait jour, les pupilles sont contractées et envoient donc la lumière vers le centre de l’oeil alors que lorsqu’il fait sombre la pupille se dilate afin de recevoir plus de lumière qui atteint donc aussi les bâtonnets qui se situent sur les côtés !</p>
+            <p>Une fois sur les récepteurs la lumière est traitée par plusieurs organes différents selon qu'elle est reçue par les cônes ou les bâtonnets. Ces organes récepteurs sont appelés "cellules bipolaires".</p>
+            <p>Au centre de la vision, donc au niveau des cônes, une cellule bipolaire est attribuée à chaque cône pour traiter les informations.</p>
+            <p>Mais sur les côtés, là où sont situés les bâtonnets, une cellule bipolaire traite les informations de plusieurs bâtonnets. <span class="font-weight-bold">C'est pour cela que l'on a une vision périphérique plus globale et que l'on distingue mal les détails de ce que l'on voit dans l'obscurité.</span></p>
 
           </div>
         </div>
@@ -55,15 +62,16 @@
     </section>
   </div>
   <div class="container mt-5">
-
-
     <!--Section: Content-->
     <section class="dark-grey-text">
-
       <!-- Section heading -->
       <h2 class="text-center font-weight-bold mb-4 pb-2">Vos questions</h2>
       <!-- Section description -->
       <p class="text-center mx-auto w-responsive mb-5">Science, actualités, nature, mathématiques, psychologie... Nimbl réponds à toutes vos questions.</p>
+
+
+
+
       <!-- questions -->
       <div class="row align-items-center">
         <div class="col-lg-5 col-xl-4">
@@ -81,49 +89,49 @@
           <p class="dark-grey-text">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
             quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus
             et aut officiis cum soluta nobis est eligendi placeat facere aut rerum.</p>
-          <!-- Post data -->
-          <p>question posée par <a class="font-weight-bold">Pierre Monvoisin</a>, le 05/04/2020</p>
-          <!-- Read more button -->
-          <a class="btn btn-primary btn-md mx-0 btn-rounded">Read more</a>
+            <!-- Post data -->
+            <p>question posée par <a class="font-weight-bold">Pierre Monvoisin</a>, le 05/04/2020</p>
+            <!-- Read more button -->
+            <a class="btn btn-primary btn-md mx-0 btn-rounded">Voir la question</a>
 
-        </div>
-      </div>
-      <hr class="my-5">
-      <div class="row align-items-center">
-        <div class="col-lg-5 col-xl-4">
-          <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
-            <img class="img-fluid" src="assets/img/seasons.jpg" alt="Sample image">
-            <a>
-              <div class="mask rgba-white-slight"></div>
-            </a>
           </div>
-
         </div>
-        <div class="col-lg-7 col-xl-8">
-          <h4 class="font-weight-bold mb-3"><strong>Pourquoi y a-t-il des saisons?</strong></h4>
+        <hr class="my-5">
+        <div class="row align-items-center">
+          <div class="col-lg-5 col-xl-4">
+            <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
+              <img class="img-fluid" src="assets/img/seasons.jpg" alt="Sample image">
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
 
-          <p class="dark-grey-text">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
-            quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus
-            et aut officiis cum soluta nobis est eligendi placeat facere aut rerum.</p>
-          <!-- Post data -->
-          <p>question posée par <a class="font-weight-bold">Séverine Picot</a>, le 05/02/2020</p>
-          <!-- Read more button -->
-          <a class="btn btn-primary btn-md mx-0 btn-rounded">Read more</a>
+          </div>
+          <div class="col-lg-7 col-xl-8">
+            <h4 class="font-weight-bold mb-3"><strong>Pourquoi y a-t-il des saisons?</strong></h4>
 
-        </div>
+            <p class="dark-grey-text">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+              quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus
+              et aut officiis cum soluta nobis est eligendi placeat facere aut rerum.</p>
+              <!-- Post data -->
+              <p>question posée par <a class="font-weight-bold">Séverine Picot</a>, le 05/02/2020</p>
+              <!-- Read more button -->
+              <a class="btn btn-primary btn-md mx-0 btn-rounded">Voir la question</a>
+
+            </div>
+          </div>
+          <hr class="my-5">
+        </section>
       </div>
-      <hr class="my-5">
-    </section>
-  </div>
 
 
-    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/popper.min.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/mdb.min.js"></script>
-    <script type="text/javascript" src="assets/js/script.jsassets/"></script>
+      <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+      <script type="text/javascript" src="assets/js/popper.min.js"></script>
+      <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="assets/js/mdb.min.js"></script>
+      <script type="text/javascript" src="assets/js/script.js"></script>
 
-  </body>
-  <!-- Footer -->
-  <?php include 'footer.php' ?>
-  </html>
+    </body>
+    <!-- Footer -->
+    <?php include 'footer.php' ?>
+    </html>

@@ -69,7 +69,7 @@
                 <a href="#!" class="black-text">Quiz</a>
 
                 <p class="card-title text-muted font-small mt-3 mb-2">Teste tes connaissances scientifiques en t'amusant et remporte des succès!</p>
-                <button class="btn btn-primary"><i class="fas fa-puzzle-piece mr-2"></i>Jouer</button>
+                <button class="btn btn-primary"><i class="fas fa-puzzle-piece mr-2"></i><a href="quizz.php" class="text-white">Jouer</a></button>
               </div>
             </div>
           </div>
@@ -82,7 +82,7 @@
               <div class="card-body">
                 <a href="#!" class="black-text">Blog</a>
                 <p class="card-title text-muted font-small mt-3 mb-2">L'actualités scientifiques décryptée par Nimbl</p>
-                <button class="btn btn-primary"><i class="far fa-newspaper mr-2"></i></i>Voir</button>
+                <button class="btn btn-primary"><i class="far fa-newspaper mr-2"></i></i><a href="blog.php" class="text-white">Voir</a></button>
               </div>
             </div>
           </div>

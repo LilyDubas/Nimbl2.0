@@ -1,14 +1,15 @@
 <?php
 $error_message = '';
+$statementValidity = false;
 // formulaire sign-in
 // récupérer toutes les infos à l'envoi du form
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['sign-in'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['sign-in'])) {
   $email = 'ERROR';
   $password = 'ERROR';
   $error_message = '';
   // VÉRIFIE QUE LES VALUES SONT SET ET PAS VIDES
-  !empty(trim($_GET['email'])) ? $email = $_GET['email'] : $error_message = 'email ou mot de passe incorrect';
-  !empty(trim($_GET['password'])) ? $password = $_GET['password'] : $error_message = 'email ou mot de passe incorrect';
+  !empty(trim($_POST['email'])) ? $email = $_POST['email'] : $error_message = 'email ou mot de passe incorrect';
+  !empty(trim($_POST['password'])) ? $password = $_POST['password'] : $error_message = 'email ou mot de passe incorrect';
 
   if($email === 'ERROR' || $password === 'ERROR'){
     // display error message
@@ -37,13 +38,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['sign-in'])) {
   }
 }
 // récupérer toutes les infos à l'envoi du form
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['sign-in'])){
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['sign-in'])){
   $email = 'ERROR';
   $password = 'ERROR';
   $error_message = '';
   // VÉRIFIE QUE LES VALUES SONT SET ET PAS VIDES
-  !empty(trim($_GET['email'])) ? $email = $_GET['email'] : $error_message = 'email ou mot de passe incorrect';
-  !empty(trim($_GET['password'])) ? $password = $_GET['password'] : $error_message = 'email ou mot de passe incorrect';
+  !empty(trim($_POST['email'])) ? $email = $_POST['email'] : $error_message = 'email ou mot de passe incorrect';
+  !empty(trim($_POST['password'])) ? $password = $_POST['password'] : $error_message = 'email ou mot de passe incorrect';
   if($email === 'ERROR' || $password === 'ERROR'){
     // display error message
   }
@@ -59,10 +60,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['sign-in'])){
     }
     else {
       // maintenant que l'email est validé on verifie le password
-      $regExPassword = '/^(?=.[\d])(?=.[A-Z])(?=.[a-z])(?=.[!@#$%^&])?[\w!@#$%^&]{8,}$/';
+      $regExPassword = '/^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&])?[\w!@#$%^&]{8,}$/';
       $passwordOK = preg_match($regExPassword, $password);
       if ($passwordOK) {
         //check si l'utilisateur existe dans la bdd
+        require 'db/user_connection.php';
+        $user_connected = check_user($email, $password);
+        if ($user_connected == true){
+          // message de confirmation, redirection profil
+        }else{
+          // message d'erreur
+        }
       }
       else {
         $error_message = 'email ou mot de passe invalide';
@@ -72,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['sign-in'])){
 }
 // formulaire sign-up
 // récupérer toutes les infos à l'envoi du form
-if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['sign-up'])){
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['sign-up'])){
   $email = 'ERROR';
   $password = 'ERROR';
   $lastname = 'ERROR';
@@ -80,11 +88,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['sign-up'])){
   $confirm_password = 'ERROR';
   $error_message = '';
   // VÉRIFIE QUE LES VALUES SONT SET ET PAS VIDES
-  !empty(trim($_GET['email'])) ? $email = $_GET['email'] : $error_message = 'Un des champs est incomplet, veuillez vérifier les informations saisies';
-  !empty(trim($_GET['password'])) ? $password = $_GET['password'] : $error_message = 'Un des champs est incomplet, veuillez vérifier les informations saisies';
-  !empty(trim($_GET['lastname'])) ? $lastname = $_GET['lastname'] : $error_message = 'Un des champs est incomplet, veuillez vérifier les informations saisies';
-  !empty(trim($_GET['firstname'])) ? $firstname = $_GET['firstname'] : $error_message = 'Un des champs est incomplet, veuillez vérifier les informations saisies';
-  !empty(trim($_GET['confirm_password'])) ? $confirm_password = $_GET['confirm_password'] : $error_message = 'Un des champs est incomplet, veuillez vérifier les informations saisies';
+  !empty(trim($_POST['email'])) ? $email = $_POST['email'] : $error_message = 'Un des champs est incomplet, veuillez vérifier les informations saisies';
+  !empty(trim($_POST['password'])) ? $password = $_POST['password'] : $error_message = 'Un des champs est incomplet, veuillez vérifier les informations saisies';
+  !empty(trim($_POST['lastname'])) ? $lastname = $_POST['lastname'] : $error_message = 'Un des champs est incomplet, veuillez vérifier les informations saisies';
+  !empty(trim($_POST['firstname'])) ? $firstname = $_POST['firstname'] : $error_message = 'Un des champs est incomplet, veuillez vérifier les informations saisies';
+  !empty(trim($_POST['confirm_password'])) ? $confirm_password = $_POST['confirm_password'] : $error_message = 'Un des champs est incomplet, veuillez vérifier les informations saisies';
 
 if($email === 'ERROR' || $password === 'ERROR' || $lastname === 'ERROR' || $firstname === 'ERROR' || $confirm_password === 'ERROR'){
   // display error message
@@ -104,7 +112,7 @@ else {
   }
   else {
     // maintenant que l'email est validé on verifie le password
-    $regExPassword = '/^(?=.[\d])(?=.[A-Z])(?=.[a-z])(?=.[!@#$%^&])?[\w!@#$%^&]{8,}$/';
+    $regExPassword = '/^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&])?[\w!@#$%^&]{8,}$/';
     $passwordOK = preg_match($regExPassword, $password);
     if ($passwordOK && $password === $confirm_password) {
       $regExName = '/^[a-zA-Z \x{00C0}-\x{00FF}"\'-]{1,25}$/u';
@@ -112,6 +120,9 @@ else {
       $firstnameOK = preg_match($regExName, $firstname);
       if ($lastnameOK && $firstnameOK){
         // ajout du user à la bdd
+        require 'db/new_user.php';
+      $statementValidity = add_new_user($email, $password, $lastname, $firstname);
+
       }
       else {
         $error_message = 'nom ou prénom invalide';
@@ -126,7 +137,7 @@ else {
 ?>
 
 <nav class="mb-1 p-3 navbar navbar-expand-lg navbar-dark peach-gradient">
-  <a class="navbar-brand" href="https://nimbl.000webhostapp.com/">Nimbl</a>
+  <a class="navbar-brand" href="index.php">Nimbl</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
   aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
@@ -138,7 +149,7 @@ else {
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Le labo</a>
+      <a class="nav-link" href="labo.php">Le labo</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="quizz.php">Quiz</a>
@@ -161,7 +172,7 @@ else {
 <!-- Modal sign-in -->
 <div class="modal fade" id="elegantModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
 aria-hidden="true">
-<form  action="#" method="get">
+<form  action="#" method="post" autocomplete="on">
   <div class="modal-dialog" role="document">
     <!--Content-->
     <div class="modal-content form-elegant">
@@ -179,13 +190,13 @@ aria-hidden="true">
       <div class="modal-body mx-4">
         <!--Body-->
         <div class="md-form mb-5">
-          <input type="email" name="email" id="email" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="email">Ton email</label>
+          <input type="email" name="email" id="email" class="form-control validate" placeholder="Ton email">
+          <label data-error="wrong" data-success="right" for="email"></label>
         </div>
 
         <div class="md-form pb-3">
-          <input type="password" name="password" id="password" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="password">Ton mot de passe</label>
+          <input type="password" name="password" id="password" class="form-control validate" placeholder="Ton mot de passe">
+          <label data-error="wrong" data-success="right" for="password"></label>
           <p class="font-small blue-text d-flex justify-content-end">Mot de passe <a href="#" class="blue-text ml-1">
             oublié?</a></p>
           </div>
@@ -217,13 +228,17 @@ aria-hidden="true">
   <!-- Modal -->
   <div class="modal fade" id="elegantModalForm2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
-  <form action="#" method="get">
+  <form action="#" method="post">
     <div class="modal-dialog" role="document">
       <!--Content-->
       <div class="modal-content form-elegant">
         <!--Header-->
         <div class="modal-header text-center">
           <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Inscription</strong></h3>
+          <h5><?php if ($statementValidity == true)
+          {
+            echo 'Votre compte a bien été créé';
+          } ?></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -233,26 +248,26 @@ aria-hidden="true">
           <!--Body-->
           <div class="row">
             <div class="md-form mb-1">
-              <input type="text" name="firstname" id="firstname" class="form-control validate">
-              <label data-error="wrong" data-success="right" for="firstname">Ton nom</label>
+              <input type="text" name="firstname" id="firstname" class="form-control validate" placeholder="Ton nom">
+              <label data-error="wrong" data-success="right" for="firstname" ></label>
             </div>
             <div class="md-form mb-1 ml-4">
-              <input type="text" name="lastname" id="lastname" class="form-control validate">
-              <label data-error="wrong" data-success="right" for="lastname">Ton prénom</label>
+              <input type="text" name="lastname" id="lastname" class="form-control validate" placeholder="Ton prénom">
+              <label data-error="wrong" data-success="right" for="lastname"></label>
             </div>
           </div>
           <div class="md-form mb-1">
-            <input type="email" name="email" id="email" class="form-control validate">
-            <label data-error="wrong" data-success="right" for="email">Ton email</label>
+            <input type="email" name="email" id="email" class="form-control validate" placeholder="Ton Email">
+            <label data-error="wrong" data-success="right" for="email"></label>
           </div>
           <div class="row">
             <div class="md-form pb-3">
-              <input type="password" name="password" id="choose_password" class="form-control validate">
-              <label data-error="wrong" data-success="right" for="choose_password">Choisis un mot de passe</label>
+              <input type="password" name="password" id="choose_password" class="form-control validate" placeholder="Choisis un mot de passe">
+              <label data-error="wrong" data-success="right" for="choose_password"></label>
             </div>
             <div class="md-form pb-3 ml-4">
-              <input type="password" name="confirm_password" id="confirm_password" class="form-control validate">
-              <label data-error="wrong" data-success="right" for="confirm_password">Confirme le mot de passe</label>
+              <input type="password" name="confirm_password" id="confirm_password" class="form-control validate" placeholder="Confirme le mot de passe">
+              <label data-error="wrong" data-success="right" for="confirm_password"></label>
             </div>
           </div>
           <div class="text-center mb-3">
