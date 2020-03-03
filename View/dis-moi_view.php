@@ -1,4 +1,4 @@
-../<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
   <meta charset="UTF-8">
@@ -7,13 +7,13 @@
   <title>MDB</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/mdb.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/mdb.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
   <!--Navbar -->
-  <?php include '../Share/header_view.php' ?>
+<?php include '../Share/header_view.php' ?>
   <!-- question de la semaine -->
 
   <h1 class="text-center p-3 font-weight-bold">La question de la semaine</h1>
@@ -27,7 +27,7 @@
 
             <!-- Card image -->
             <div class="view view-cascade overlay">
-              <img class="card-img-top" src="assets/img/see-in-the-dark.jpg" alt="Sample image">
+              <img class="card-img-top" src="../assets/img/see-in-the-dark.jpg" alt="Sample image">
               <a href="#!">
                 <div class="mask rgba-white-slight"></div>
               </a>
@@ -43,8 +43,8 @@
               C’est à cause de la composition de ses yeux ! Lorsque de la lumière atteint notre œil celle-ci passe d’abord par la pupille et l’iris, qui s’agrandit (se dilate) ou se rétrécit (se contracte) selon l’intensité de la lumière. Quand il y a beaucoup de lumière, ceux-ci se contractent et quand il fait plus sombre ils se dilatent afin de recevoir plus de lumière à transmettre ensuite à la rétine tapissée de récepteurs de lumière.
             </p>
             <div class="m-5 d-flex justify-content-around">
-              <img src="assets/img/reflexe-pupillaire.jpg" alt="illustration pupille"  id="pupille">
-              <img src="assets/img/vision.png" alt="schéma oeil humain" id="oeil">
+              <img src="../assets/img/reflexe-pupillaire.jpg" alt="illustration pupille"  id="pupille">
+              <img src="../assets/img/vision.png" alt="schéma oeil humain" id="oeil">
             </div>
             <p>Les récepteurs (dits photo-récepteurs car ils reçoivent la lumière, qui a pour racine le mot « photos » en grec) sont appelés des cônes et des bâtonnets.</p>
             <p>Les cônes permettent de voir le jour (on dit « vision diurne ») et les bâtonnets permettent de voir la nuit (« vision nocturne »). Les bâtonnets ne perçoivent que le noir, le blanc et les nuances de gris !</p>
@@ -76,7 +76,7 @@
       <div class="row align-items-center">
         <div class="col-lg-5 col-xl-4">
           <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
-            <img class="img-fluid" src="assets/img/sea-lion.jpg" alt="Sample image">
+            <img class="img-fluid" src="../assets/img/sea-lion.jpg" alt="Sample image">
             <a>
               <div class="mask rgba-white-slight"></div>
             </a>
@@ -100,7 +100,7 @@
         <div class="row align-items-center">
           <div class="col-lg-5 col-xl-4">
             <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
-              <img class="img-fluid" src="assets/img/seasons.jpg" alt="Sample image">
+              <img class="img-fluid" src="../assets/img/seasons.jpg" alt="Sample image">
               <a>
                 <div class="mask rgba-white-slight"></div>
               </a>
@@ -133,5 +133,5 @@
 
     </body>
     <!-- Footer -->
-    <?php include 'footer.php' ?>
+    <?php include '../footer.php' ?>
     </html>

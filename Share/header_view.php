@@ -1,7 +1,7 @@
-<?php require 'Controller/header_controller.php'; ?>
+<?php require '../Share/header_controller.php'; ?>
 
 <nav class="mb-1 p-3 navbar navbar-expand-lg navbar-dark peach-gradient">
-  <a class="navbar-brand" href="index.php">Nimbl</a>
+  <a class="navbar-brand" href="../../../index.php">Nimbl</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
   aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
@@ -9,17 +9,17 @@
 <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="dis-moi.php">Dis-moi Nimbl?
+      <a class="nav-link" href="dis-moi_view.php">Dis-moi Nimbl?
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="labo.php">Le labo</a>
+      <a class="nav-link" href="labo_view.php">Le labo</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="quizz.php">Quiz</a>
+      <a class="nav-link" href="quizz_view.php">Quiz</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="blog.php">Blog</a>
+      <a class="nav-link" href="blog_view.php">Blog</a>
     </li>
   </ul>
   <ul class="navbar-nav ml-auto nav-flex-icons">

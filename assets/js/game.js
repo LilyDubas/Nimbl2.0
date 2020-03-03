@@ -48,7 +48,7 @@ function startGame() {
 function getNewQuestion() {
         if (availableQuestions.length == 0 || questionCounter >= MAX_QUESTIONS){  // if there's no more available questions
             //go to the end page
-            return window.location.assign('/endgame.php');
+            return window.location.assign('../View/endgame_view.php');
         }
         questionCounter++; //increment questionCounter
         progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;//displays how many available questions left

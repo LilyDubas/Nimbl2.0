@@ -9,17 +9,17 @@
 <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="dis-moi.php">Dis-moi Nimbl?
+      <a class="nav-link" href="View/dis-moi_view.php">Dis-moi Nimbl?
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="labo.php">Le labo</a>
+      <a class="nav-link" href="View/labo_view.php">Le labo</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="quizz.php">Quiz</a>
+      <a class="nav-link" href="View/quizz_view.php">Quiz</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="blog.php">Blog</a>
+      <a class="nav-link" href="View/blog_view.php">Blog</a>
     </li>
   </ul>
   <ul class="navbar-nav ml-auto nav-flex-icons">
